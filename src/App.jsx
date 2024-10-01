@@ -3,9 +3,10 @@ import { products as initialProducts } from './mocks/products.json'
 import { useState } from 'react'
 import { Header } from './components/Header/Header.jsx'
 import { useFilters } from './hooks/useFilters.js'
-import { Footer } from './components/Footer/Footer.jsx'
+import { Info } from './components/Info/Info.jsx'
 import { Cart } from './components/Cart/Cart.jsx'
 import { CartProvider } from './context/cart.jsx'
+import { Footer } from './components/Footer/Footer.jsx'
 
 function App() {
   const [products] = useState(initialProducts)
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Cart />
       <Products products={filteredProducts} />
+      <Info />
       <Footer />
     </CartProvider>
   )

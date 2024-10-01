@@ -1,21 +1,35 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'); /* Bootstrap icons CDN */
+
 .footer {
-    position: fixed;
-    left: 16px;
-    bottom: 16px;
-    text-align: left;
-    background: rgba(0, 0, 0, .7);
-    padding: 8px 24px;
-    border-radius: 32px;
-    opacity: .95;
-    backdrop-filter: blur(8px);
+  width: 100%;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
   }
-  
-  .footer span {
-    font-size: 14px;
-    color: rgb(0, 247, 255);
-    opacity: .8;
+  a:hover {
+    color: #09F;
   }
-  
-  .footer h4, .footer h5 {
-    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
+}
